@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import {Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter}
     from "@mui/icons-material";
+import {mobile} from "../responsive.js";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `
 const Left = styled.div`
   flex: 1;
@@ -13,14 +15,16 @@ const Left = styled.div`
 `
 
 const Logo = styled.h1`
-
+  ${mobile({textAlign: "center", marginBottom: '5px'})}
 `
 const Desc = styled.p`
    margin: 20px 0;
+  ${mobile({display: 'none'})}
 `
 
 const SocialContainer = styled.div`
    display: flex;
+  ${mobile({alignSelf: "center"})}
 `
 const SocialIcon = styled.div`
   width: 40px;
@@ -36,6 +40,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -55,6 +60,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `
 
 const ContactItem = styled.div`
@@ -71,7 +77,7 @@ const Footer = () => {
     return (
         <Container>
             <Left>
-                <Logo>App.</Logo>
+                <Logo>ECommerce</Logo>
                 <Desc>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, consectetur corporis eaque fuga harum
                     ipsa iusto labore molestiae molestias neque porro quia quod rem totam voluptatem. Eligendi hic
